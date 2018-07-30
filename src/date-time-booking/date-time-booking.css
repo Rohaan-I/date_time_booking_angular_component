@@ -1,0 +1,63 @@
+.time-cards {
+  overflow-x: auto;
+  padding-right: 10px;
+}
+.time-cards mat-card {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+
+  cursor: pointer;
+  min-width: 100px;
+  text-align: center;
+}
+.time-cards mat-card span {
+  font-weight: bold;
+  margin-right: 3px;
+}
+
+.time-card-highlighted {
+  background-color: #673ab7;
+  color: white;
+}
+
+.no_selection {
+  -webkit-user-select: none; /* webkit (safari, chrome) browsers */
+  -moz-user-select: none; /* mozilla browsers */
+  -khtml-user-select: none; /* webkit (konqueror) browsers */
+  -ms-user-select: none; /* IE10+ */
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+  background: #CCC;
+}
+
+.total-charges {
+  margin-top: 25px;
+  font-size: 18px;
+}
+
+.total-charges .label {
+  color: rgba(0,0,0,0.5);
+}
+
+.total-charges .value {
+  color: #000;
+}
+
+.margin-right {
+  margin-right: 10px;
+}
+
+.book-now {
+  margin-top: 25px;
+}
+
+.book-now button {
+  width: 200px;
+  height: 45px;
+  font-size: 18px;
+}

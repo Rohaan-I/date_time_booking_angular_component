@@ -1,0 +1,30 @@
+<mat-card>
+  <mat-form-field>
+      <input #ref matInput [matDatepicker]="picker" [formControl]="date" placeholder="Choose a date" (dateChange)="dateChanged(ref.value)">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+  <div fxLayout="row" fxLayoutWrap class="time-cards">
+    <div fxFlex *ngFor="let time of timeSlots" [hidden]="!time.isVisible">
+      <mat-card  class="no_selection" [ngClass]="{'time-card-highlighted': time.isHighLighted == true, 'disabled': !time.isEnabled}" (click)="selectTimeSlot(time)">
+        <span>{{time.startHour}}</span>{{time.startPhase}} - <span>{{time.endHour}}</span>{{time.endPhase}} 
+      </mat-card>
+    </div>
+  </div>
+
+  <div fxLayout="row" class="total-charges">
+    <div fxFlex="100%" class="label">
+      Total Charges  
+    </div>
+    <div fxFlex>
+      <span class="value margin-right">{{this.totalCharges}}</span>
+      <span class="label">{{this.currency}}</span>  
+    </div>
+  </div>
+
+  <div fxLayout="row" fxLayoutAlign="center" class="book-now">
+    <button mat-raised-button (click)="bookNow()">Book Now</button>
+  </div>
+ 
+</mat-card>
